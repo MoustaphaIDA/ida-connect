@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>JavaScript – Module IDA</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+<div class="mobile-header">
+  <button class="menu-toggle" id="menu-toggle">
+  <span id="menu-icon">☰</span>
+</button>
+
+  <span class="site-title">IDA Connect</span>
+</div>
+
+<nav class="mobile-nav" id="mobile-nav">
+  <ul>
+    <li><a href="index.html">🏠 Accueil</a></li>
+    <li><a href="html-css.html">🎨 HTML & CSS</a></li>
+    <li><a href="javascript.html">📟 JavaScript</a></li>
+    <li><a href="réseaux.html">📡 Réseaux</a></li>
+    <li><a href="web.html">🌐 Dev Web</a></li>
+    <li><a href="envi-mobile.html">📱 Envi Mobile</a></li>
+    <li><a href="programmation.html">🧑🏽‍💻 Scratch</a></li>
+    <li><a href="algo.html">🧠 Algo</a></li>
+    <li><a href="dev-mobile.html">📲 Dev Mobile</a></li>
+    <li><a href="anglais.html">🇬🇧 Anglais</a></li>
+  </ul>
+</nav>
+
+  <header>
+    <h1>📟 JavaScript</h1>
+    <p>Le langage de programmation qui rend les pages web interactives et dynamiques.</p>
+  </header>
+
+  <section class="accordion">
+    <button class="accordion-btn">🔗 Ressources</button>
+    <div class="accordion-content">
+      <ul>
+        <li><a href="https://developer.mozilla.org/fr/docs/Learn/JavaScript/First_steps">MDN-JavaScript Basics</a></li>
+        <li><a href="https://cursa.app/fr/cours-gratuit/javascript-complet-behh" target="_blank">Cours JavaScript – Cursa</a></li>
+        <li><a href="https://openclassrooms.com/fr/courses/7696886-apprenez-a-programmer-avec-javascript" target="_blank">Apprendre JS – OpenClassrooms</a></li>
+        <li><a href="https://www.pierre-giraud.com/javascript-apprendre-coder-cours/" target="_blank">Cours interactif – Pierre Giraud</a></li>
+        <li><a href="https://www.youtube.com/watch?v=VZLflMqC6dI&list=PLwLsbqvBlImFB8AuT6ENIg-s87ys4yGWI"></a> Cours complet sur JavaScript</li>
+      </ul>
+    </div>
+
+    <button class="accordion-btn">📄 Fichiers à télécharger</button>
+    <div class="accordion-content">
+      <ul>
+        <li><a href="documents/javascript/javascript-cours.pdf">Cours JavaScript (PDF)</a></li>
+        <li><a href="documents/javascript/javascript-exo.pdf">Exercices corrigés en JS</a></li>
+      </ul>
+    </div>
+
+    <button class="accordion-btn">🧪 Projets</button>
+    <div class="accordion-content">
+      <ul>
+        <li><a href="#">Créer une calculatrice simple</a></li>
+        <li><a href="#">Formulaire dynamique</a></li>
+        <li><a href="#">Jeu devine le nombre</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <p><a href="index.html">← Retour à l’accueil</a></p>
+  </footer>
+
+  <script>
+    const accBtns = document.querySelectorAll('.accordion-btn');
+    accBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.classList.toggle('active');
+        const content = btn.nextElementSibling;
+        content.style.display = content.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+  </script>
+  <script>
+  const menuToggle = document.getElementById("menu-toggle");
+  const mobileNav = document.getElementById("mobile-nav");
+  const menuIcon = document.getElementById("menu-icon");
+
+  menuToggle.addEventListener("click", () => {
+    mobileNav.classList.toggle("show");
+    menuIcon.textContent = mobileNav.classList.contains("show") ? "❌" : "☰";
+  });
+</script>
+
+
+</body>
+<footer class="cursa-reminder">
+  <p><strong>📢 Note :</strong> Les cours de <a href="https://cursa.app/" target="_blank">Cursa</a> sont disponibles uniquement via l’application mobile.</p>
+  <p>📱 Téléchargez l’application pour Android ou iPhone :</p>
+  <ul>
+    <li><a href="https://play.google.com/store/apps/details?id=app.cursa&hl=fr&gl=US" target="_blank">📥 Télécharger Cursa sur Android</a></li>
+    <li><a href="https://apps.apple.com/sn/app/cursa-apprenez-nimporte-quoi/id1532641572?l=fr" target="_blank">📥 Télécharger Cursa sur iPhone</a></li>
+  </ul>
+</footer>
+
+</html>
