@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Algorithme – Module IDA</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+<div class="mobile-header">
+  <button class="menu-toggle" id="menu-toggle">
+  <span id="menu-icon">☰</span>
+</button>
+
+  <span class="site-title">IDA Connect</span>
+</div>
+
+<nav class="mobile-nav" id="mobile-nav">
+  <ul>
+    <li><a href="index.html">🏠 Accueil</a></li>
+    <li><a href="html-css.html">🎨 HTML & CSS</a></li>
+    <li><a href="javascript.html">📟 JavaScript</a></li>
+    <li><a href="réseaux.html">📡 Réseaux</a></li>
+    <li><a href="web.html">🌐 Dev Web</a></li>
+    <li><a href="envi-mobile.html">📱 Envi Mobile</a></li>
+    <li><a href="programmation.html">🧑🏽‍💻 Scratch</a></li>
+    <li><a href="algo.html">🧠 Algo</a></li>
+    <li><a href="dev-mobile.html">📲 Dev Mobile</a></li>
+    <li><a href="anglais.html">🇬🇧 Anglais</a></li>
+  </ul>
+</nav>
+
+  <header>
+    <h1>🧠 Algorithme</h1>
+    <p>Apprendre à résoudre un problème étape par étape grâce à la logique et à la structuration d’instructions.</p>
+  </header>
+
+  <section class="accordion">
+
+    <button class="accordion-btn">🔗 Ressources</button>
+    <div class="accordion-content">
+      <ul>
+        <li><a href="https://www.youtube.com/watch?v=kk6YbA5I-Iw&list=PL2aehqZh72Lumvy4tSekr6Rzcgwn15MLI">Cours avec Mohamed Chiny</a></li>
+        <li><a href="https://www.youtube.com/watch?v=bsOd3KxdRpM&list=PL2aehqZh72LvYVvoGpIU65j1qmgFcnjFA">Vidéo – Exercices</a></li>
+        <li><a href="https://pdfprof.com/fr/exercices/programmation+et+algorithmes/cours+complet+d%27algorithme+pour+d%C3%A9butants+avec+exercices+et+corrig%C3%A9s+pdf/4412">Cours completavec des exercices corrigés (PDF Prof)</a></li>
+        <li><a href="https://pdfprof.com/fr/exercices/programmation+et+algorithmes/cours+complet+d%27algorithme+pour+d%C3%A9butants+avec+exercices+et+corrig%C3%A9s+pdf/4412" target="_blank">Cours complet PDF + exercices corrigés</a></li>
+        <li><a href="https://algo.developpez.com/cours/" target="_blank">Tutoriels et cours interactifs – Developpez.com</a></li>
+      </ul>
+    </div>
+
+    <button class="accordion-btn">📄 Fichiers à télécharger</button>
+    <div class="accordion-content">
+      <ul>
+        <li><a href="documents/Algo/algo-cours.pdf">Fiche résumé (PDF)</a></li>
+        <li><a href="documents/Algo/algo-exo.pdf">Exercices</a></li>
+      </ul>
+    </div>
+
+    <button class="accordion-btn">🧪 Projets</button>
+    <div class="accordion-content">
+      <ul>
+        <li><a href="#">Écrire un algorithme de tri</a></li>
+        <li><a href="#">Tracer un organigramme</a></li>
+        <li><a href="#">Transformer un problème en code</a></li>
+      </ul>
+    </div>
+
+  </section>
+
+  <footer>
+    <p><a href="index.html">← Retour à l’accueil</a></p>
+  </footer>
+
+  <script>
+    const accBtns = document.querySelectorAll('.accordion-btn');
+    accBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.classList.toggle('active');
+        const content = btn.nextElementSibling;
+        content.style.display = content.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+  </script>
+  <script>
+  const menuToggle = document.getElementById("menu-toggle");
+  const mobileNav = document.getElementById("mobile-nav");
+  const menuIcon = document.getElementById("menu-icon");
+
+  menuToggle.addEventListener("click", () => {
+    mobileNav.classList.toggle("show");
+    menuIcon.textContent = mobileNav.classList.contains("show") ? "❌" : "☰";
+  });
+</script>
+
+
+</body>
+<footer class="cursa-reminder">
+  <p><strong>📢 Note :</strong> Les cours de <a href="https://cursa.app/" target="_blank">Cursa</a> sont disponibles uniquement via l’application mobile.</p>
+  <p>📱 Téléchargez l’application pour Android ou iPhone :</p>
+  <ul>
+    <li><a href="https://play.google.com/store/apps/details?id=app.cursa&hl=fr&gl=US" target="_blank">📥 Télécharger Cursa sur Android</a></li>
+    <li><a href="https://apps.apple.com/sn/app/cursa-apprenez-nimporte-quoi/id1532641572?l=fr" target="_blank">📥 Télécharger Cursa sur iPhone</a></li>
+  </ul>
+</footer>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Développement mobile – Module IDA</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+<div class="mobile-header">
+  <button class="menu-toggle" id="menu-toggle">
+  <span id="menu-icon">☰</span>
+</button>
+
+  <span class="site-title">IDA Connect</span>
+</div>
+
+<nav class="mobile-nav" id="mobile-nav">
+  <ul>
+    <li><a href="index.html">🏠 Accueil</a></li>
+    <li><a href="html-css.html">🎨 HTML & CSS</a></li>
+    <li><a href="javascript.html">📟 JavaScript</a></li>
+    <li><a href="réseaux.html">📡 Réseaux</a></li>
+    <li><a href="web.html">🌐 Dev Web</a></li>
+    <li><a href="envi-mobile.html">📱 Envi Mobile</a></li>
+    <li><a href="programmation.html">🧑🏽‍💻 Scratch</a></li>
+    <li><a href="algo.html">🧠 Algo</a></li>
+    <li><a href="dev-mobile.html">📲 Dev Mobile</a></li>
+    <li><a href="anglais.html">🇬🇧 Anglais</a></li>
+  </ul>
+</nav>
+
+  <header>
+    <h1>📲 Développement mobile</h1>
+    <p>Découvrir comment créer des applications pour smartphone avec des outils modernes (Android, PWA, React
+      Native...).</p>
+  </header>
+
+  <section class="accordion">
+
+    <button class="accordion-btn">🔗 Ressources</button>
+    <div class="accordion-content">
+      <ul>
+        <li><a href="https://www.youtube.com/watch?v=35Bb2hJIKKg&list=PLrMZu04URlemBKhgst3KocUiT9iv-85nt">Maitrisez Android Studio code</a></li>
+        <li><a href="https://www.youtube.com/watch?v=8CR40Dp1srw&list=PLMS9Cy4Enq5JnwAxe6Ao74qSTxxXjiw7N">Video- Creer une application Android</a></li>
+        <li><a href="https://cursa.app/cours-gratuits-programmation-dapplications-mobiles-online" target="_blank">Flutter / React Native – Cursa</a></li>
+        <li><a href="https://www.courspdf.net/programmation/android/580-programmation-mobile-avec-android" target="_blank">PDF Android – CoursPDF.net</a></li>
+      </ul>
+    </div>
+    <button class="accordion-btn">📄 Fichiers à télécharger</button>
+    <div class="accordion-content">
+      <ul>
+        <li><a href="documents/dev-mobile/dev-mobile-1.pdf">Cours Développement Mobile 1 (PDF)</a></li>
+        <li><a href="documents/dev-mobile/dev-mobile-2.pdf">Cours Développement Mobile 2 (PDF)</a></li>
+        <li><a href="docoments/dev-mobile/dev-mobile-3.pdf">Cours Développement Mobile 3 (PDF)</a></li>
+      </ul>
+    </div>
+
+    <button class="accordion-btn">🧪 Projets</button>
+    <div class="accordion-content">
+      <ul>
+        <li><a href="#">Créer une première interface avec composants</a></li>
+        <li><a href="#">Simuler un écran de connexion</a></li>
+        <li><a href="#">Créer un bouton interactif</a></li>
+      </ul>
+    </div>
+
+  </section>
+
+  <footer>
+    <p><a href="index.html">← Retour à l’accueil</a></p>
+  </footer>
+
+  <script>
+    const accBtns = document.querySelectorAll('.accordion-btn');
+    accBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.classList.toggle('active');
+        const content = btn.nextElementSibling;
+        content.style.display = content.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+  </script>
+  <script>
+  const menuToggle = document.getElementById("menu-toggle");
+  const mobileNav = document.getElementById("mobile-nav");
+  const menuIcon = document.getElementById("menu-icon");
+
+  menuToggle.addEventListener("click", () => {
+    mobileNav.classList.toggle("show");
+    menuIcon.textContent = mobileNav.classList.contains("show") ? "❌" : "☰";
+  });
+</script>
+
+
+</body>
+<footer class="cursa-reminder">
+  <p><strong>📢 Note :</strong> Les cours de <a href="https://cursa.app/" target="_blank">Cursa</a> sont disponibles uniquement via l’application mobile.</p>
+  <p>📱 Téléchargez l’application pour Android ou iPhone :</p>
+  <ul>
+    <li><a href="https://play.google.com/store/apps/details?id=app.cursa&hl=fr&gl=US" target="_blank">📥 Télécharger Cursa sur Android</a></li>
+    <li><a href="https://apps.apple.com/sn/app/cursa-apprenez-nimporte-quoi/id1532641572?l=fr" target="_blank">📥 Télécharger Cursa sur iPhone</a></li>
+  </ul>
+</footer>
+
+</html>

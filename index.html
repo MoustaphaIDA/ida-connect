@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IDA Connect – Accueil</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div class="mobile-header">
+    <button class="menu-toggle" id="menu-toggle">
+      <span id="menu-icon">☰</span>
+    </button>
+
+    <span class="site-title">IDA Connect</span>
+  </div>
+
+  <nav class="mobile-nav" id="mobile-nav">
+    <ul>
+      <li><a href="index.html">🏠 Accueil</a></li>
+      <li><a href="html-css.html">🎨 HTML & CSS</a></li>
+      <li><a href="javascript.html">📟 JavaScript</a></li>
+      <li><a href="réseaux.html">📡 Réseaux</a></li>
+      <li><a href="web.html">🌐 Dev Web</a></li>
+      <li><a href="envi-mobile.html">📱 Envi Mobile</a></li>
+      <li><a href="programmation.html">🧑🏽‍💻 Scratch</a></li>
+      <li><a href="algo.html">🧠 Algo</a></li>
+      <li><a href="dev-mobile.html">📲 Dev Mobile</a></li>
+      <li><a href="anglais.html">🇬🇧 Anglais</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Bienvenue sur IDA Connect</h1>
+    <p>Un portail conçu pour les étudiants de la filière IDA – modules, ressources et entraide.</p>
+  </header>
+
+  <section class="modules-grid">
+    <h2>📚 Modules disponibles</h2>
+    <div class="grid">
+      <a href="html-css.html" class="card">🎨 HTML & CSS</a>
+      <a href="javascript.html" class="card">📟 JavaScript</a>
+      <a href="réseaux.html" class="card">📡 Réseaux</a>
+      <a href="web.html" class="card">🌐 Développement Web</a>
+      <a href="envi-mobile.html" class="card">📱 Environnement Mobile</a>
+      <a href="programmation.html" class="card">🧑🏽‍💻 Programmation (Scratch)</a>
+      <a href="algo.html" class="card">🧠 Algorithme</a>
+      <a href="dev-mobile.html" class="card">📲 Développement Mobile</a>
+      <a href="anglais.html" class="card">🇬🇧 Anglais – Altissia</a>
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2>📬 Me contacter</h2>
+    <div class="contact-info">
+
+      <p>Email : <a href="mailto:moustapha.ida47@gmail.com">moustapha.ida47@gmail.com</a></p>
+    </div>
+  </section>
+
+  <section class="about">
+    <h2>👨🏽‍💻 À propos de moi</h2>
+    <div class="about">
+      <p>Je suis Moustapha, étudiant de la promotion 12, rattaché à l'ENO de Mbour. J’ai créé ce site pour guider et
+        partager mes ressources avec mes camarades de la filière IDA.</p>
+      <p>N’hésitez pas à me faire part de vos suggestions, conseils et remarques 💡</p>
+    </div>
+  </section>
+
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileNav = document.getElementById("mobile-nav");
+    const menuIcon = document.getElementById("menu-icon");
+
+    menuToggle.addEventListener("click", () => {
+      mobileNav.classList.toggle("show");
+      menuIcon.textContent = mobileNav.classList.contains("show") ? "❌" : "☰";
+    });
+  </script>
+
+  <section class="feedback">
+    <h2>💬 Vos retours anonymes</h2>
+    <p>Ton avis m’aide à améliorer ce site. Aucune identification, juste ton ressenti 👇🏽</p>
+
+    <form id="feedback-form" action="https://formsubmit.co/moustapha.ida47@gmail.com" method="POST">
+      <textarea name="message" placeholder="Suggestions, remarques, idées…" required></textarea>
+      <button type="submit">Envoyer le message</button>
+    </form>
+
+    <div id="confirmation" class="confirmation">✅ Message bien reçu, merci !</div>
+  </section>
+
+  <script>
+    const form = document.getElementById('feedback-form');
+    const confirmation = document.getElementById('confirmation');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      confirmation.style.display = 'block';
+
+      setTimeout(() => {
+        form.submit();
+      }, 800);
+    });
+  </script>
+
+</body>
+
+</html>
